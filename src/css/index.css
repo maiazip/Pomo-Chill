@@ -8,94 +8,112 @@
   vertical-align: baseline;
   text-decoration: none;
 }
+
 :root {
-
-    --whites: #fefefe;
-    --transparent: #ffffff4d;
-    --blacks: #151515;
-
-  /* --yellow: #e49400;
-  --green: #2d8515;
-  --red: #db2a34;
-  --blue: #2477ff;
-  --dark-blue: #17193b;
-  --purple: #474d84;
-  --purple-secondary: #333867;
-  --title-primary-color: rgb(231 226 226); */
+    --color--whites: #fefefe;
+    --color--transparent: #ffffff4d;
+    --color--blacks: #151515;
 }
-body * {
-  font-family: "Roboto", sans-serif;
-}
+
 body {
   height: 100vh;
+  width: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: teal;
+  font-family: "Oxygen","Roboto", sans-serif;
+  position: relative;
 }
-.container {
+
+.bg {
+    /* display: none; */
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: -10;
+}
+
+.containerMain {
+  /* background-color: var(--color--transparent); */
+  width: 40rem;
+  height: 30rem;
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4rem;
 }
-.card {
+
+.cardSection {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
-  border-radius: 20px;
-  background: var(--dark-blue)=;
+  padding: 2rem;
+  border-radius: 2rem;
+  background: var(--color--transparent);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
+
 .cardHeader {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: 10px;
+  gap: 1rem;
 }
+
 .cardHeader h1 {
   font-weight: 200;
-  font-size: 1.5rem;
-  color: var(--whites);
-  letter-spacing: 0.5rem;
-  font-family: Oxygen, sans-serif;
+  font-size: 1.6rem;
+  color: var(--color--whites);
+  letter-spacing: 0.5em;
 }
+
 .cardHeaderButtons {
   display: flex;
   justify-content: stretch;
-  gap: 10px;
-  padding: 4px;
-}
-.cardHeaderButtons button {
-  padding: 8px;
-  border-radius: 20px;
-  font-weight: 700;
-  font-size: 12px;
-  background-color: var(--transparent);
-  color: var(--title-primary-color);
-}
-.cardHeaderButtons .active {
-  background-color: var(--whites);
-  color: var(--blacks);
+  gap: 1rem;
+  padding: 0.5rem;
 }
 
-/* card body */
+.cardHeaderButtons button {
+  padding: 0.5rem;
+  border-radius: 1rem;
+  font-weight: 200;
+  font-size: 1rem;
+  background-color: var(--color--transparent);
+  color: var(--color--whites);
+}
+
+.cardHeaderButtons .active {
+  background-color: var(--color--whites);
+  color: var(--color--blacks);
+}
+
+.cardHeaderButtons button:hover {
+    scale: 1.1;
+    transition: 0.4s;
+}
+
 .cardBody {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 30px;
+  padding: 2rem;
 }
+
 .progressBar {
-  height: 180px;
-  width: 180px;
+  height: 11rem;
+  width: 11rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: conic-gradient(var(--blue) 360deg, var(--purple) 0deg);
+  background: conic-gradient(var(--color--transparent) 360deg, var(--color--transparent) 0deg);
   border-radius: 50%;
   animation: pulse 3s infinite;
   transition: all ease;
@@ -103,56 +121,70 @@ body {
     rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
     rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
+
 .progressBarInner {
   width: 90%;
   height: 90%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--dark-blue);
+  background: var(--color--transparent);
   border-radius: 50%;
-  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+  /* box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
     rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
-    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset; */
 }
+
 .progressBarInner h2 {
-  color: var(--whites);
-  font-weight: 900;
-  font-size: 40px;
+  color: var(--color--whites);
+  font-weight: 200;
+  font-size: 2.5rem;
 }
-/* card footer */
+
 .cardFooter {
   display: flex;
   justify-content: stretch;
-  gap: 20px;
-  padding: 10px;
-}
-.cardFooter button {
-  padding: 10px 12px;
-  border-radius: 6px;
-  background-color: var(--transparent);
-  color: var(--title-primary-color);
-  font-weight: 900;
-  font-size: 14px;
-}
-.cardFooter .btnSucess {
-  background-color: var(--transparent);
-}
-.cardFooter .btnDanger {
-  background-color: var(--transparent;
+  gap: 1rem;
+  padding: 1rem;
 }
 
-@keyframes pulse {
-  0% {
-    transform: scale(0.97);
-    box-shadow: 0 0 0 0 rgba(52, 172, 224, 0.7);
-  }
-  50% {
-    transform: scale(1);
-    box-shadow: 0 0 0 10px rgba(52, 172, 224, 0);
-  }
-  100% {
-    transform: scale(0.97);
-    box-shadow: 0 0 0 0 rgba(52, 172, 224, 0);
-  }
+.cardFooter button {
+  padding: 0.6rem 0.8rem;
+  border-radius: 1rem;
+  background-color: var(--color--transparent);
+  color: var(--color--whites);
+  font-weight: 200;
+  font-size: 1rem;
+}
+/* .cardFooter .btnSucess {
+  background-color: var(--color--transparent);
+}
+.cardFooter .btnDanger {
+  background-color: var(--color--transparent);
+} */
+
+
+
+
+
+
+
+
+
+#credits {
+    background-color: var(--color--transparent);
+    width: 100vw;
+    height: 3vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 97%;
+    color: var(--color--whites);
+}
+
+#credits a {
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+    color: var(--color--blacks);
 }
