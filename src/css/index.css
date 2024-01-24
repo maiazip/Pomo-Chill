@@ -11,7 +11,7 @@
 
 :root {
     --color--whites: #fefefe;
-    --color--transparent: #ffffff4d;
+    --color--transparent: #ffffff6d;
     --color--blacks: #151515;
 }
 
@@ -97,6 +97,7 @@ body {
 .cardHeaderButtons button:hover {
     scale: 1.1;
     transition: 0.4s;
+    cursor: pointer;
 }
 
 .cardBody {
@@ -156,6 +157,16 @@ body {
   font-weight: 200;
   font-size: 1rem;
 }
+
+.cardFooter button:hover {
+    scale: 1.1;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.cardFooter button:active {
+    color: red;
+}
 /* .cardFooter .btnSucess {
   background-color: var(--color--transparent);
 }
@@ -187,4 +198,10 @@ body {
     text-decoration: underline;
     text-underline-offset: 0.3rem;
     color: var(--color--blacks);
+}
+
+#credits a:hover {
+    scale: 1.1;
+    transition: 0.4s;
+    cursor: pointer;
 }
