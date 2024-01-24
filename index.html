@@ -5,14 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Pomodoro and LoFi together to boost your prodictivity">
     <title>Pomo&Chill</title>
+    <link href="https://fonts.googleapis.com/css?family=Oxygen:300,regular,700" rel="stylesheet" />
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <video src="./assets/bg.mp4"></video>
-    <main>
-<header></header>
-<section></section>
-<footer></footer>
+    <main class="containerMain">
 
-    </main>
+        <section class="cardSection">
+
+            <div class="cardHeader">
+                <h1>Pomodoro Timer</h1>
+                <div class="cardHeaderButtons">
+
+                    <button id="buttonTypePomodoro"
+                            class="active" 
+                            onclick="setPomodoroType(TIMER_TYPE_POMODORO);">
+                            Pomodoro
+                    </button>
+
+                    <button id="buttonTypeShortBreak"
+                            onclick="setPomodoroType(TIMER_TYPE_SHORT_BREAK);">
+                        Short Break
+                    </button>
+                    
+                    <button id="buttonTypeLongBreak"
+                    onclick="setPomodoroType(TIMER_TYPE_LONG_BREAK);">Long Break
+                </button>
+
+                </div>
+            </div>
+
+            <div class="card-body">
+
+                <div id="circularProgressBar" class="progress-bar">
+                    <div class="progress-bar-inner">
+                        <h2 class="progress-value">25:00</h2>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="card-footer">
+
+                <button class="btn-sucess" onclick="startTimer();">Start</button>
+                <button class="btn-danger" onclick="stopTimer();">Stop</button>
+                <button onclick="resetTimer();">Reset</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+<!-- 
+<video id="bg1" src="./src/assets/bg.mp4" autoplay muted loop></video>
+<footer>
+    <p>developed with 🤍 by <a href="https://maiazip.github.io/LinkTree/" target="_blank">@maia.zip</a></p>
+</footer> -->
+
+<script src="./src/js/index.js"></script>
 </body>
 </html>
