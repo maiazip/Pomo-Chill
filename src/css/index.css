@@ -1,26 +1,10 @@
-*,
-*:after,
-*:before {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  text-decoration: none;
-}
-
-:root {
-    --color--whites: #fefefe;
-    --color--transparent: #ffffff6d;
-    --color--blacks: #151515;
-}
-
 body {
   height: 100vh;
   width: auto;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: baseline;
   background-color: teal;
   font-family: "Oxygen","Roboto", sans-serif;
   position: relative;
@@ -38,49 +22,51 @@ body {
 
 .containerMain {
   /* background-color: var(--color--transparent); */
-  width: 40rem;
+  width: 30rem;
   height: 30rem;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 4rem;
+  margin: 2rem;
+  z-index: 10;
 }
 
-.cardSection {
+.timerSection {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 2rem;
   border-radius: 2rem;
-  background: var(--color--transparent);
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  /* background: var(--color--transparent);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; */
 }
 
-.cardHeader {
+.timerHeader {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
-.cardHeader h1 {
+.timerHeader h1 {
   font-weight: 200;
   font-size: 1.6rem;
   color: var(--color--whites);
   letter-spacing: 0.5em;
 }
 
-.cardHeaderButtons {
+.timerHeaderButtons {
   display: flex;
   justify-content: stretch;
   gap: 1rem;
   padding: 0.5rem;
 }
 
-.cardHeaderButtons button {
+.timerHeaderButtons button {
   padding: 0.5rem;
   border-radius: 1rem;
   font-weight: 200;
@@ -89,18 +75,18 @@ body {
   color: var(--color--whites);
 }
 
-.cardHeaderButtons .active {
+.timerHeaderButtons .active {
   background-color: var(--color--whites);
   color: var(--color--blacks);
 }
 
-.cardHeaderButtons button:hover {
+.HeaderButtons button:hover {
     scale: 1.1;
     transition: 0.4s;
     cursor: pointer;
 }
 
-.cardBody {
+.timerBody {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -142,14 +128,14 @@ body {
   font-size: 2.5rem;
 }
 
-.cardFooter {
+.timerFooter {
   display: flex;
   justify-content: stretch;
   gap: 1rem;
   padding: 1rem;
 }
 
-.cardFooter button {
+.timerFooter button {
   padding: 0.6rem 0.8rem;
   border-radius: 1rem;
   background-color: var(--color--transparent);
@@ -158,29 +144,16 @@ body {
   font-size: 1rem;
 }
 
-.cardFooter button:hover {
+.timerFooter button:hover {
     scale: 1.1;
     transition: 0.4s;
     cursor: pointer;
 }
 
-.cardFooter button:active {
-    color: red;
+.timerFooter button:active {
+    background-color: var(--color--whites);
+    color: var(--color--blacks);
 }
-/* .cardFooter .btnSucess {
-  background-color: var(--color--transparent);
-}
-.cardFooter .btnDanger {
-  background-color: var(--color--transparent);
-} */
-
-
-
-
-
-
-
-
 
 #credits {
     background-color: var(--color--transparent);
@@ -197,11 +170,59 @@ body {
 #credits a {
     text-decoration: underline;
     text-underline-offset: 0.3rem;
-    color: var(--color--blacks);
+    color: var(--color--whites);
 }
 
 #credits a:hover {
     scale: 1.1;
     transition: 0.4s;
     cursor: pointer;
+}
+
+iframe {
+  border-radius: 1rem;
+}
+
+form {
+  display: relative;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+}
+textarea {
+  border-radius: 1rem;
+  width: 33.5vw; /* (40rem) */
+  height: 80vh;
+  background-color: var(--color--transparent);
+  resize: none;
+}
+
+textarea::placeholder {
+  padding: 1rem;
+  color: var(--color--whites);
+}
+
+input {
+  background-color: var(--color--transparent);
+  border-radius: 0.3rem;
+  font-family: "Oxygen";
+  color: var(--color--whites);
+  padding: 0.5rem;
+}
+
+#inputMargin {
+  margin-left: 8.2rem;
+}
+
+#spotify {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  height: 80vh;
+  width: 33.5vw;
+}
+
+#youtube {
+  height: 30vh;
+  width: 26vw;
 }

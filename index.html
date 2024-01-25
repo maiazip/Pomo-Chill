@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Pomodoro and LoFi together to boost your prodictivity">
+    <link rel="icon" href="./src/assets/favicon.svg">
     <title>Pomo&Chill</title>
     <link href="https://fonts.googleapis.com/css?family=Oxygen:300,regular,700" rel="stylesheet" />
     <link rel="stylesheet" href="./src/css/reset.css">
@@ -12,36 +13,18 @@
     <link rel="stylesheet" href="./src/css/media.css">
 </head>
 <body>
-
-    <main class="containerMain">
-
-        <section class="cardSection">
-
-            <div class="cardHeader">
-                <h1>Pomo&Chill</h1>
-                <div class="cardHeaderButtons">
-
-                    <button id="buttonTypePomodoro"
-                            class="active" 
-                            onclick="setPomodoroType(TIMER_TYPE_POMODORO);">
-                            Pomodoro
-                    </button>
-
-                    <button id="buttonTypeShortBreak"
-                            onclick="setPomodoroType(TIMER_TYPE_SHORT_BREAK);">
-                        Short Break
-                    </button>
-                    
-                    <button id="buttonTypeLongBreak"
-                    onclick="setPomodoroType(TIMER_TYPE_LONG_BREAK);">Long Break
-                </button>
-
-                </div>
-            </div>
-
-            <div class="cardBody">
-
-                <div id="roundProgressBar" class="progressBar">
+<main class="containerMain">
+<section class="timerSection">
+<header class="timerHeader">
+<h1>Pomo&Chill</h1>
+<div class="timerHeaderButtons">
+<button id="buttonTypePomodoro" class="active" onclick="setPomodoroType(TIMER_TYPE_POMODORO);">Pomodoro</button>
+<button id="buttonTypeShortBreak" onclick="setPomodoroType(TIMER_TYPE_SHORT_BREAK);">Short Break</button>
+<button id="buttonTypeLongBreak" onclick="setPomodoroType(TIMER_TYPE_LONG_BREAK);">Long Break</button>
+</div>    
+</header>
+<div class="timerBody">
+<div id="roundProgressBar" class="progressBar">
                     <div class="progressBarInner">
                         <h2 class="progressValue">25:00</h2>
                     </div>
@@ -49,7 +32,8 @@
 
             </div>
 
-            <footer class="cardFooter">
+            <footer class="timerFooter">
+                
 
                 <button class="btnSucess" onclick="startTimer();">Start</button>
                 <button class="btnDanger" onclick="stopTimer();">Stop</button>
@@ -60,15 +44,27 @@
         </div>
       
     </main>
+<iframe id="spotify" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7K3scENpOi7ZPZUHfnfic3?utm_source=generator&theme=0" width="30%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+    <iframe  id="youtube" width="500" height="280" src="https://www.youtube.com/embed/jfKfPfyJRdk" title="lofi hip hop radio 📚 - beats to relax/study to" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     <video class="bg" src="./src/assets/bg9.mp4" autoplay muted loop></video>
 
+        
+   <form action="">
+    <textarea id="" cols="30" rows="10" placeholder="Use this space to make your notes" onclick="this.focus();this.select();document.execCommand('copy')" name="textarea1" class="textarea1"></textarea>
+    <div><input title="One click transfers the code to the clipboard" type="button" value="Copy to clipboard" onClick="this.form.textarea2.focus();this.form.textarea2.select(); document.execCommand('copy')">
+    <input type="button" value="Clear textarea" id="inputMargin">  <input type="button" value="Copy & Clear" id="inputMargin">
+    </div>
+   </form>
+   
 
     <footer id="credits">
         <p>developed with 🩶 by <a href="https://maiazip.github.io/LinkTree/" target="_blank">@maia.zip</a>👈🖱️</p>
     </footer>
+    
 
-
-
+    <iframe id="spotify" style="border-radius:1rem" src="https://open.spotify.com/embed/playlist/7K3scENpOi7ZPZUHfnfic3?utm_source=generator&theme=0" width="25vw" height="20rem" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    
 <script src="./src/js/index.js"></script>
 </body>
 </html>

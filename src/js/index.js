@@ -6,7 +6,7 @@ const buttonTypeShortBreak = document.querySelector('#buttonTypeShortBreak');
 const audio = new Audio('alarm.mp3');
 
 const pomodoroTimerInSeconds = 1500;
-const shortBreakTimerInSeconds = 100;
+const shortBreakTimerInSeconds = 500;
 const TIMER_TYPE_POMODORO = 'POMODORO';
 const TIMER_TYPE_SHORT_BREAK ='SHORTBREAK';
 
@@ -16,12 +16,8 @@ let timerValue = pomodoroTimerInSeconds;
 let multiplierFactor = 360 / timerValue;
 
 function formatNumberInStringMinute(number){
-    const minutes = Math.trunc(number / 60)
-    .toString()
-    .padStart(2, '0');
-    const seconds = Math.trunc(number % 60)
-    .toString()
-    .padStart(2, '0');
+    const minutes = Math.trunc(number / 60).toString().padStart(2, '0');
+    const seconds = Math.trunc(number % 60).toString().padStart(2, '0');
     
     return `${minutes}:${seconds}`;
 }
@@ -53,7 +49,7 @@ function setInfoRoundProgressBar() {
     }
 
     roundProgressBarNumber.textContent = `${formatNumberInStringMinute(timerValue) }`;
-    circularProgressBar.style.background = `conic-gradient(var(--blue) ${timerValue * multiplierFactor}deg, var(--purple) 0deg)`;
+    // roundProgressBar.style.background = `conic-gradient(var(--color--whites) ${timerValue * multiplierFactor}deg, var(--color-transparent) 0deg)`;
 }
 
 const setPomodoroType = (type) =>{
