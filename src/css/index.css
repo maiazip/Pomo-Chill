@@ -80,7 +80,7 @@ body {
   color: var(--color--blacks);
 }
 
-.HeaderButtons button:hover {
+.timerHeaderButtons button:hover {
     scale: 1.1;
     transition: 0.4s;
     cursor: pointer;
@@ -179,6 +179,19 @@ body {
     cursor: pointer;
 }
 
+#credits button {
+  position: absolute;
+  right: 1rem;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+}
+
+#credits button:hover {
+  scale: 1.1;
+  transition: 0.4s;
+}
+
 iframe {
   border-radius: 1rem;
 }
@@ -189,12 +202,14 @@ form {
   top: 2rem;
   left: 2rem;
 }
+
 textarea {
   border-radius: 1rem;
   width: 33.5vw; /* (40rem) */
   height: 80vh;
   background-color: var(--color--transparent);
   resize: none;
+  color: var(--color--whites);
 }
 
 textarea::placeholder {
@@ -202,7 +217,8 @@ textarea::placeholder {
   color: var(--color--whites);
 }
 
-input {
+
+form input {
   background-color: var(--color--transparent);
   border-radius: 0.3rem;
   font-family: "Oxygen";
@@ -210,11 +226,19 @@ input {
   padding: 0.5rem;
 }
 
-#inputMargin {
-  margin-left: 8.2rem;
+.formInput {
+  margin-left: 0.5rem;
+}
+
+form input:hover {
+  scale: 1.1;
+  transition: 0.4s;
+  background-color: var(--color--whites);
+  color: var(--color--blacks);
 }
 
 #spotify {
+  border-radius: 1rem;
   position: absolute;
   top: 2rem;
   right: 2rem;
@@ -223,6 +247,6 @@ input {
 }
 
 #youtube {
-  height: 30vh;
-  width: 26vw;
+  height: 29vh;
+  width: 25.9vw;
 }

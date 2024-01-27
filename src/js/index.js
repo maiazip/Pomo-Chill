@@ -1,3 +1,38 @@
+// Botão de fechar os créditos
+
+const closeCredits = document.querySelector('#btnCloseCredits')
+const credits = document.querySelector('#credits')
+closeCredits.addEventListener('click', () => {
+    credits.style.display = 'none' } )
+
+// timer
+
+// Botão de copiar, botão de apagar, botão copiar e apagar
+document.getElementById('#btnCopy').onclick = function copy() {
+    document.querySelector("textarea").select().execCommand(copy);
+}
+
+document.getElementById('#btnClear').onclick = function clearNotes() {
+    document.getElementById('#notes').value = '';
+}
+
+ 
+
+
+
+
+
+// tempo de cada botão em segundos
+const pomodoroSeconds = 1500;
+const breakSeconds = 300;
+const longBreakSeconds = 900;
+
+
+
+
+
+
+
 const roundProgressBar = document.querySelector('#roundProgressBar');
 const roundProgressBarNumber = document.querySelector('#roundProgressBar .progressValue');
 const buttonTypePomodoro = document.querySelector('#buttonTypePomodoro');

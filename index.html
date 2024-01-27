@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Pomodoro and LoFi together to boost your prodictivity">
-    <link rel="icon" href="./src/assets/favicon.svg">
+    <link rel="icon" href="./src/assets/icons/favicon2.svg">
     <title>Pomo&Chill</title>
     <link href="https://fonts.googleapis.com/css?family=Oxygen:300,regular,700" rel="stylesheet" />
     <link rel="stylesheet" href="./src/css/reset.css">
@@ -25,46 +25,35 @@
 </header>
 <div class="timerBody">
 <div id="roundProgressBar" class="progressBar">
-                    <div class="progressBarInner">
-                        <h2 class="progressValue">25:00</h2>
-                    </div>
-                </div>
-
-            </div>
-
-            <footer class="timerFooter">
-                
-
-                <button class="btnSucess" onclick="startTimer();">Start</button>
-                <button class="btnDanger" onclick="stopTimer();">Stop</button>
-                <button onclick="resetTimer();">Reset</button>
-
-            </footer>
-
-        </div>
-      
-    </main>
+<div class="progressBarInner">
+<h2 class="progressValue">25:00</h2>
+</div>
+</div>
+</div>
+<footer class="timerFooter">
+<button onclick="startTimer();" title="Start Timer"><img src="./src/assets/icons/btnplay.svg" alt=""></button>
+<button onclick="stopTimer();" title="Stop Timer"><img src="./src/assets/icons/btnstop.svg" alt=""></button>
+<button onclick="resetTimer();" title="Reset Timer"><img src="./src/assets/icons/btnrestart.svg" alt=""></button>
+</footer>
+</div>
+</main>
 <iframe id="spotify" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7K3scENpOi7ZPZUHfnfic3?utm_source=generator&theme=0" width="30%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-
-    <iframe  id="youtube" width="500" height="280" src="https://www.youtube.com/embed/jfKfPfyJRdk" title="lofi hip hop radio 📚 - beats to relax/study to" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    <video class="bg" src="./src/assets/bg9.mp4" autoplay muted loop></video>
-
-        
-   <form action="">
-    <textarea id="" cols="30" rows="10" placeholder="Use this space to make your notes" onclick="this.focus();this.select();document.execCommand('copy')" name="textarea1" class="textarea1"></textarea>
-    <div><input title="One click transfers the code to the clipboard" type="button" value="Copy to clipboard" onClick="this.form.textarea2.focus();this.form.textarea2.select(); document.execCommand('copy')">
-    <input type="button" value="Clear textarea" id="inputMargin">  <input type="button" value="Copy & Clear" id="inputMargin">
-    </div>
-   </form>
-   
-
-    <footer id="credits">
-        <p>developed with 🩶 by <a href="https://maiazip.github.io/LinkTree/" target="_blank">@maia.zip</a>👈🖱️</p>
-    </footer>
-    
-
-    <iframe id="spotify" style="border-radius:1rem" src="https://open.spotify.com/embed/playlist/7K3scENpOi7ZPZUHfnfic3?utm_source=generator&theme=0" width="25vw" height="20rem" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-    
+<iframe  id="youtube" width="500" height="280" src="https://www.youtube.com/embed/jfKfPfyJRdk?&autoplay=1" title="lofi hip hop radio 📚 - beats to relax/study to" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen title="Youtube LoFi"></iframe>
+<video class="bg" src="./src/assets/videos/bg9.mp4" autoplay muted loop></video>
+<form action="" method="">
+<textarea id="notes" cols="30" rows="10" placeholder="Testing only" name="textarea"></textarea>
+<div>
+<input type="button" id="btnCopy" value="Copy to clipboard">
+<input type="button" id="btnClear" value="Clear textarea" id="inputMargin" class="formInput">
+<input type="button" id="btnCopyClear" value="Copy & Clear" class="formInput">
+</div>
+</form>
+<footer id="credits">
+<p>developed with 🩶 by <a src="https://maiazip.github.io/LinkTree/" target="_blank">@maia.zip</a>👈🖱️</p>
+<button id="btnCloseCredits" onclick="hideDiv()" title="Close Credits Bar"><img src="./src/assets/icons/btnclose.svg" alt=""></button>
+</footer>
+<iframe id="spotify" title="Spotify Playlist" src="https://open.spotify.com/embed/playlist/7K3scENpOi7ZPZUHfnfic3?utm_source=generator&theme=0" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <!-- <iframe src="https://discord.com/widget?id=1158790756258033724&theme=dark" width="800" height="200" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe> -->
 <script src="./src/js/index.js"></script>
 </body>
 </html>
