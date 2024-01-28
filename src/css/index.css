@@ -20,7 +20,7 @@ body {
     z-index: -10;
 }
 
-.containerMain {
+.mainContainer {
   /* background-color: var(--color--transparent); */
   width: 30rem;
   height: 30rem;
@@ -122,20 +122,20 @@ body {
     rgba(255, 255, 255, 0.08) 0px 1px 0px inset; */
 }
 
-.progressBarInner h2 {
+.progressBarInner p {
   color: var(--color--whites);
   font-weight: 200;
   font-size: 2.5rem;
 }
 
-.timerFooter {
+.timerFooterButtons {
   display: flex;
   justify-content: stretch;
   gap: 1rem;
   padding: 1rem;
 }
 
-.timerFooter button {
+.timerFooterButtons button {
   padding: 0.6rem 0.8rem;
   border-radius: 1rem;
   background-color: var(--color--transparent);
@@ -144,7 +144,7 @@ body {
   font-size: 1rem;
 }
 
-.timerFooter button:hover {
+.timerFooterButtons button:hover {
     scale: 1.1;
     transition: 0.4s;
     cursor: pointer;
@@ -192,18 +192,14 @@ body {
   transition: 0.4s;
 }
 
-iframe {
-  border-radius: 1rem;
-}
-
-form {
+#notesForm {
   display: relative;
   position: absolute;
   top: 2rem;
   left: 2rem;
 }
 
-textarea {
+#notesForm textarea {
   border-radius: 1rem;
   width: 33.5vw; /* (40rem) */
   height: 80vh;
@@ -212,13 +208,13 @@ textarea {
   color: var(--color--whites);
 }
 
-textarea::placeholder {
+#notesForm textarea::placeholder {
   padding: 1rem;
   color: var(--color--whites);
 }
 
 
-form input {
+#notesForm input {
   background-color: var(--color--transparent);
   border-radius: 0.3rem;
   font-family: "Oxygen";
@@ -226,18 +222,18 @@ form input {
   padding: 0.5rem;
 }
 
-.formInput {
+#btnClear, #btnCopyClear {
   margin-left: 0.5rem;
 }
 
-form input:hover {
+#notesForm input:hover {
   scale: 1.1;
   transition: 0.4s;
   background-color: var(--color--whites);
   color: var(--color--blacks);
 }
 
-#spotify {
+#spotify { display: none;
   border-radius: 1rem;
   position: absolute;
   top: 2rem;
@@ -249,4 +245,56 @@ form input:hover {
 #youtube {
   height: 29vh;
   width: 25.9vw;
+  border-radius: 1rem;
+  display: none;
+}
+
+#tasksSection {
+  border-radius: 1rem;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  height: 80vh;
+  width: 33.5vw;
+  color: var(--color--whites);
+  background-color: var(--color--transparent);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: baseline;
+}
+
+#tasksSection h1 {
+  font-weight: 200;
+  font-size: 1.6rem;
+  color: var(--color--whites);
+  letter-spacing: 0.5em;
+}
+
+#tasksSection button {
+  background-color: var(--color--transparent);
+  color: var(--color--whites);
+  padding: 1rem;
+  margin: 0.5rem;
+
+}
+
+#tasksSection ol {
+  font-weight: 200;
+  font-size: 1.6rem;
+  color: var(--color--whites);
+  letter-spacing: 0.5em;
+}
+
+#tarefas form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#tarefas input {
+  background-color: var(--color--transparent);
+  width: 35rem;
+  height: 3vh;
 }

@@ -3,57 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pomodoro and LoFi together to boost your prodictivity">
-    <link rel="icon" href="./src/assets/icons/favicon2.svg">
-    <title>Pomo&Chill</title>
-    <link href="https://fonts.googleapis.com/css?family=Oxygen:300,regular,700" rel="stylesheet" />
-    <link rel="stylesheet" href="./src/css/reset.css">
-    <link rel="stylesheet" href="./src/css/index.css">
-    <link rel="stylesheet" href="./src/css/animation.css">
-    <link rel="stylesheet" href="./src/css/media.css">
+    <meta name="description" content="Boost your prodictivity with Pomo & Chill, using Pomodoro Timer, LoFi and Notes">
+     <title>Pomo&Chill</title>
+      <link rel="icon" href="./src/assets/icons/favicon2.svg">
+      <link href="https://fonts.googleapis.com/css?family=Oxygen:300,regular,700" rel="stylesheet" />
+      <link rel="stylesheet" href="./src/css/reset.css">
+      <link rel="stylesheet" href="./src/css/index.css">
+      <link rel="stylesheet" href="./src/css/animation.css">
+      <link rel="stylesheet" href="./src/css/media.css">
 </head>
 <body>
-<main class="containerMain">
+<main class="mainContainer">
 <section class="timerSection">
 <header class="timerHeader">
 <h1>Pomo&Chill</h1>
 <div class="timerHeaderButtons">
-<button id="buttonTypePomodoro" class="active" onclick="setPomodoroType(TIMER_TYPE_POMODORO);">Pomodoro</button>
-<button id="buttonTypeShortBreak" onclick="setPomodoroType(TIMER_TYPE_SHORT_BREAK);">Short Break</button>
-<button id="buttonTypeLongBreak" onclick="setPomodoroType(TIMER_TYPE_LONG_BREAK);">Long Break</button>
+<button  onclick="selectTimer('pomodoro')"    class="active" id="btnPomodoro">Pomodoro</button>
+<button  onclick="selectTimer('shortbreak')"    id="btnShortBreak">Short Break</button>
+<button  onclick="selectTimer('longbreak')"    id="btnLongBreak">Long Break</button>
 </div>    
 </header>
 <div class="timerBody">
 <div id="roundProgressBar" class="progressBar">
 <div class="progressBarInner">
-<h2 class="progressValue">25:00</h2>
+<p id="timerValue">25:00</p>
 </div>
 </div>
 </div>
-<footer class="timerFooter">
-<button onclick="startTimer();" title="Start Timer"><img src="./src/assets/icons/btnplay.svg" alt=""></button>
-<button onclick="stopTimer();" title="Stop Timer"><img src="./src/assets/icons/btnstop.svg" alt=""></button>
-<button onclick="resetTimer();" title="Reset Timer"><img src="./src/assets/icons/btnrestart.svg" alt=""></button>
+<footer class="timerFooterButtons">
+<button id="btnPlay" title="start timer" onclick="startTimer(selectedTimer)"><img src="./src/assets/icons/btnplay.svg" alt=""></button>
+<button id="btnPause" title="Stop Timer"><img src="./src/assets/icons/btnstop.svg" alt=""></button>
+<button id="btnRestart" title="Restart Timer"><img src="./src/assets/icons/btnrestart.svg" alt=""></button>
 </footer>
 </div>
 </main>
 <iframe id="spotify" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7K3scENpOi7ZPZUHfnfic3?utm_source=generator&theme=0" width="30%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 <iframe  id="youtube" width="500" height="280" src="https://www.youtube.com/embed/jfKfPfyJRdk?&autoplay=1" title="lofi hip hop radio 📚 - beats to relax/study to" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen title="Youtube LoFi"></iframe>
 <video class="bg" src="./src/assets/videos/bg9.mp4" autoplay muted loop></video>
-<form action="" method="">
-<textarea id="notes" cols="30" rows="10" placeholder="Testing only" name="textarea"></textarea>
+<form action="" method="" id="notesForm">
+<textarea id="notes" cols="30" rows="10" placeholder="Testing only" name="textarea">Copia aqui</textarea>
 <div>
 <input type="button" id="btnCopy" value="Copy to clipboard">
-<input type="button" id="btnClear" value="Clear textarea" id="inputMargin" class="formInput">
-<input type="button" id="btnCopyClear" value="Copy & Clear" class="formInput">
+<input type="button" id="btnClear" value="Clear the textarea">
+<input type="button" id="btnCopyClear" value="Copy & Clear">
 </div>
 </form>
 <footer id="credits">
 <p>developed with 🩶 by <a src="https://maiazip.github.io/LinkTree/" target="_blank">@maia.zip</a>👈🖱️</p>
-<button id="btnCloseCredits" onclick="hideDiv()" title="Close Credits Bar"><img src="./src/assets/icons/btnclose.svg" alt=""></button>
+<button id="btnCloseCredits" title="Close Credits Bar"><img src="./src/assets/icons/btnclose.svg" alt=""></button>
 </footer>
 <iframe id="spotify" title="Spotify Playlist" src="https://open.spotify.com/embed/playlist/7K3scENpOi7ZPZUHfnfic3?utm_source=generator&theme=0" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     <!-- <iframe src="https://discord.com/widget?id=1158790756258033724&theme=dark" width="800" height="200" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe> -->
 <script src="./src/js/index.js"></script>
+
+
+
+<section id="tasksSection">
+    <div id="tarefas">
+        <h1>tarefas</h1>
+        <form action="">
+    <input type="text" id="newTask" name="new task" title="add new task"/>
+    <button id="addTask">botão</button>
+</form>
+</div>
+<div id="tasksList">
+    <ol id="tasks">lista</ol>
+</div>
+</section>
 </body>
 </html>
