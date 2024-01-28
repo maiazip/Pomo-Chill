@@ -202,7 +202,7 @@ body {
 #notesForm textarea {
   border-radius: 1rem;
   width: 33.5vw; /* (40rem) */
-  height: 80vh;
+  height: 85vh;
   background-color: var(--color--transparent);
   resize: none;
   color: var(--color--whites);
@@ -254,7 +254,7 @@ body {
   position: absolute;
   top: 2rem;
   right: 2rem;
-  height: 80vh;
+  height: 85vh;
   width: 33.5vw;
   color: var(--color--whites);
   background-color: var(--color--transparent);
@@ -274,9 +274,10 @@ body {
 #tasksSection button {
   background-color: var(--color--transparent);
   color: var(--color--whites);
-  padding: 1rem;
+  padding: 0.5rem;
   margin: 0.5rem;
-
+  border-radius: 0.4rem;
+  font-weight: 200;
 }
 
 #tasksSection ol {
@@ -297,4 +298,29 @@ body {
   background-color: var(--color--transparent);
   width: 35rem;
   height: 3vh;
+}
+
+#tasksList li {
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: baseline;
+  background-color: var(--color--transparent);
+  margin: 0.5rem;
+  width: 34rem;
+  height: 1rem;
+  border-radius: 0.3rem;
+  font-weight: 200;
+  font-size: 1.6rem;
+  color: var(--color--whites);
+  letter-spacing: 0;
+}
+
+#tasksSection h1 {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  font-weight: 200;
+  font-size: 1.6rem;
+  letter-spacing: 0.5em;
 }
