@@ -40,6 +40,7 @@ position: absolute;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   /* border: 2px solid var(--color--transparent2); */
   margin-top: 2rem;
+  z-index: 4;
 }
 
 
@@ -150,6 +151,7 @@ position: absolute;
   top: 0rem;
   left: 2rem;
   margin-top: 2rem;
+  z-index: 3;
 }
 
 .notes textarea {
@@ -160,8 +162,11 @@ position: absolute;
   resize: none;
   color: var(--color--whites);
   padding: 1rem;
-  overflow: hidden;
+  overflow: scroll;
   /* border: 2px solid var(--color--transparent2); */
+}
+textarea::-webkit-scrollbar {
+display: none;
 }
 
 .notes textarea::placeholder {
@@ -214,6 +219,7 @@ position: absolute;
   justify-content: baseline;
   /* border: 2px solid var(--color--transparent2); */
   margin-top: 2rem;
+  z-index: 3;
 }
 
 #tasks h1 {
@@ -305,6 +311,7 @@ position: absolute;
   top: 96vh;
   color: var(--color--whites);
   /* border-top: 2px solid var(--color--transparent2); */
+  z-index: 3;
 }
 
 #credits a {
