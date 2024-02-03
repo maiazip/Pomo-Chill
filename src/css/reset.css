@@ -8,10 +8,13 @@
   vertical-align: none;
   text-decoration: none;
   list-style: none;
+  font-family: "Oxygen", "Roboto", sans-serif;
 }
 
 :root {
     --color--whites: #fefefe;
-    --color--transparent: #ffffff2d;
+    --color--transparent2: #ffffff2d;
     --color--blacks: #151515;
+    --color-background: #030207b7;
+    --color--transparent: #25252559;
 }

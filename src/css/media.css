@@ -1,1 +1,29 @@
-@media
+@media (max-width: 1400px) {
+
+    #tasks {
+        display: none;
+    }
+
+    .notes {
+        display: none;
+    }
+    
+    main {
+        justify-content: center;
+    }
+ 
+    .pomodoro {
+        background: none;
+        box-shadow: none;
+        width: 26rem;
+    }
+
+    #youtube {
+        width: 20rem;
+        background: none;
+        box-shadow: none;
+        border-radius: 2rem;
+        display: none;
+        
+    }
+}
