@@ -56,26 +56,12 @@
         <h1>Tasks</h1>
         <form action="">
     <input type="text" id="newTask" name="new task" title="add new task"/>
-    <button id="addTask">Create Task</button>
+    <button type="button" id="createTask">Create Task</button>
 </form>
 </div>
 <div id="tasksList">
     <ol id="createdTasks">
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-        <li>5</li>
-        <li>6</li>
-        <li>7</li>
-        <li>8</li>
-        <li>9</li>
-        <li>10</li>
-        <li>11</li>
-        <li>12</li>
-        <li>13</li>
-        <li>14</li>
-
+       
     </ol>
 </div>
 </section>
@@ -101,7 +87,16 @@
 
 
 
-
+<template id="taskTemplate">
+    <li class="task">
+        <div class="taskContainer">
+            <span class="taskText"></span>
+            <button type="button" class="btnDeleteTask">
+                <img src="/src/assets/icons/btnDelete.svg" alt="delete button icon">
+            </button>
+        </div>
+    </li>
+</template>
 
 
 <script src="./src/js/index.js"></script>

@@ -1,11 +1,11 @@
-//     // }
-
 const timerTypePomodoro = document.querySelector('#btnPomodoro');
 const timerTypeShortBreak = document.querySelector('#btnShortBreak');
 const timerTypeLongBreak = document.querySelector('#btnLongBreak');
 const btnPlay = document.querySelector('#btnPlay')
 const btnPause = document.querySelector('#btnPause');
 const btnRestart = document.querySelector('#btnRestart')
+const initialTitle = document.title;
+
 let interval;
 let currentTimerValue = null;
 let selectedTimer = 'pomodoro';
@@ -54,17 +54,18 @@ function changeTimerValue(timer) {
 }
 
 function selectTimer(timer) {
+    if (timerRunning) {
+        pauseTimer();
+    }
+
     selectedTimer = timer;
-    
     changeSelectedTimer(timer);
     changeTimerValue(timer);
+    resetPageTitle();
 }
 
-function selectTimer(timer) {
-    selectedTimer = timer;
-
-    changeSelectedTimer(timer);
-    changeTimerValue(timer);
+function resetPageTitle() {
+    document.title = initialTitle;
 }
 
 function startTimer(timer, initialTime) {
@@ -77,6 +78,7 @@ function startTimer(timer, initialTime) {
             seconds--;
 
             timerValue.textContent = secondsToMinutesSeconds(seconds);
+            document.title = `${secondsToMinutesSeconds(seconds)} - Pomo&Chill`;
 
             if (seconds === 0) {
                 clearInterval(interval);
@@ -112,29 +114,9 @@ function restartTimer() {
     startTimer(selectedTimer);
 }
 
-// Adicionando eventos aos botões
 timerTypePomodoro.addEventListener('click', () => selectTimer('pomodoro'));
 timerTypeShortBreak.addEventListener('click', () => selectTimer('shortbreak'));
 timerTypeLongBreak.addEventListener('click', () => selectTimer('longbreak'));
 btnPlay.addEventListener('click', resumeTimer);
 btnPause.addEventListener('click', pauseTimer);
 btnRestart.addEventListener('click', restartTimer);
-
-
-// Iniciar o timer padrão ao carregar a página
-// startTimer(selectedTimer);
-
-
-
-
-// const credits = document.querySelector('#credits')
-// const closeCredits = document.querySelector('#btnCloseCredits')
-// closeCredits.addEventListener('click', () => {
-//     credits.style.display = 'none' })
-    
-//     // let copyTextarea = document.querySelector('#btnCopy')
-//     // let clearTextarea = document.querySelector('#btnClear')
-//     // let copyAndClearTextarea = document.querySelector('#btnCopyClear')
-//     // let textarea = document.querySelector('#notes')
-//     // copyTextarea.onclick = function copyText () {
-//     //     notes.select().execCommand('copy');

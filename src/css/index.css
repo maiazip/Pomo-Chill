@@ -1,3 +1,8 @@
+* {
+  color: var(--color--whites);
+  font-family: "Oxygen", "Roboto", sans-serif;
+}
+
 body {
 width: 100vw;
 height: 100vh;
@@ -268,7 +273,7 @@ display: none;
   justify-content: baseline;
   background-color: var(--color--transparent);
   margin: 0.5rem;
-  width: 29.1vw;
+  max-width: 29.1vw;
   height: 1rem;
   border-radius: 0.3rem;
   font-weight: 200;
@@ -337,4 +342,25 @@ display: none;
 #credits button:hover {
   scale: 1.1;
   transition: 0.4s;
+}
+
+.taskContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.taskContainer:not(:last-child) {
+  border: 1px solid red;
+}
+
+.taskContainer button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+#task {
+  max-width: 80%;
 }
