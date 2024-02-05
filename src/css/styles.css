@@ -194,6 +194,7 @@ display: none;
   color: var(--color--whites);
   padding: 0.5rem;
   margin-top: 0.2rem;
+  cursor: pointer;
   /* border: 2px solid var(--color--transparent2); */
 }
 
@@ -241,7 +242,7 @@ display: none;
   letter-spacing: 0.5em;
 }
 
-#tasks button {
+#tasks #createTask {
   background-color: var(--color--transparent);
   color: var(--color--whites);
   padding: 0.5rem;
@@ -254,6 +255,7 @@ display: none;
 #tasks button:hover {
   scale: 1.1;
   transition: 0.4s;
+  cursor: pointer;
 }
 
 #tasks form {
@@ -278,12 +280,12 @@ display: none;
   justify-content: baseline;
   background-color: var(--color--transparent);
   margin: 0.5rem;
-  max-width: 29.1vw;
-  height: 1rem;
+  width: 30vw;
+  height: 50%;
   border-radius: 0.3rem;
-  font-weight: 200;
-  color: var(--color--whites);
+  font-weight: 100;
   /* border: 2px solid var(--color--transparent2); */
+  word-break: break-all;
 }
 
 #youtube {
@@ -310,9 +312,9 @@ display: none;
   width: 100%;
 }
 
-.taskContainer:not(:last-child) {
+/* .taskContainer:not(:last-child) {
   border: 1px solid red;
-}
+} */
 
 .taskContainer button {
   border: none;
@@ -320,8 +322,9 @@ display: none;
   cursor: pointer;
 }
 
-#task {
-  max-width: 80%;
+.taskText {
+  padding: 0.2rem;
+  margin: 0rem;
 }
 
 #credits {
@@ -338,15 +341,14 @@ display: none;
 }
 
 #credits a {
-  color: var(--color--whites);
-  font-weight: 600;
+  font-weight: 900;
 }
 
 #credits a:hover {
     cursor: pointer;
     background-color: var(--color--whites);
     color: var(--color--blacks);
-    border-radius: 0.5rem;
+    border-radius: 0.2rem;
 }
 
 #credits button {
@@ -358,6 +360,7 @@ display: none;
 }
 
 #credits button:hover {
+  cursor: pointer;
   scale: 1.1;
   transition: 0.4s;
 }
