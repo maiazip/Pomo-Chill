@@ -11,7 +11,7 @@ Boost your productivity with Pomo&Chill!
 
 <div align="center">
 
-[Link para acesso](https://maiazip.github.io/Pomo-Chill/)
+[Access Link](https://maiazip.github.io/Pomo-Chill/)
 </div>
 
 <p align="center">
