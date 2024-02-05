@@ -45,10 +45,11 @@
         padding: 0.2rem;
     }
 
-    #tasks {
+     #tasks {
         position: unset;
         width: 80%;
-        height: 40vh;
+        height: auto; /* Ajuste a altura para se adaptar ao conteúdo */
+        margin: 2rem auto; /* Adicione margem para centralizar e espaço */
     }
 
     #tasks input {
