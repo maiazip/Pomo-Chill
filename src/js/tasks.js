@@ -6,8 +6,13 @@ const taskTemplate = document.querySelector('#taskTemplate');
 renderTasksFromLocalStorage();
 
 btnCreateTask.addEventListener('click', () => {
-    const newTask = taskInput.value;
-    createTask(newTask);
+    const newTask = taskInput.value.trim(); // Remova espaços em branco no início e no final
+    if (newTask !== "") {
+        createTask(newTask);
+        taskInput.value = ""; // Limpe o input após criar a tarefa
+    } else {
+        alert("Give your task a name or description!"); // Adicione um alerta ou mensagem de erro
+    }
 });
 
 function renderTask(newTask) {

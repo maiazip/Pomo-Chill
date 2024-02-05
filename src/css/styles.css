@@ -289,6 +289,14 @@ display: none;
   word-break: break-all;
 }
 
+#newTask::placeholder {
+  color: var(--color--whites);
+  text-align: center;
+  font-family: "Oxygen";
+  font-size: 1rem;
+  opacity: 50%;
+}
+
 #youtube {
   height: 38.5vh;
   width: 22vw;
