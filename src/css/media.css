@@ -1,26 +1,66 @@
-@media (max-width: 1440px) {
+
+@media (max-width: 1439px){
+    .pomodoro {
+        background: none;
+        box-shadow: none;
+        width: 90%;
+    }
+
+    #youtube {
+        display: none;
+    }
 
     #tasks {
-        display: none;
+        width: 28%;
+        height: 82%;
+    }
+
+    .notes {
+        width: 40%;
+    }
+
+    .notes textarea{
+        width: 70%;
+        height: 82vh;
+    }
+    
+    #notesButtons input {
+        width: 24%;
+    }
+    #btnMute {
+        display: initial;
+    }
+}
+
+
+@media (max-width: 1000px) {
+
+    .pomodoro {
+        background: none;
+        box-shadow: none;
+        width: 90%;
+    }
+
+    .pomodoroHeaderButtons button {
+        padding: 0.2rem;
+    }
+
+    #tasks {
+        position: unset;
+        width: 80%;
+        height: 40vh;
+    }
+
+    #tasks input {
+        width: 80vw;
     }
 
     .notes {
         display: none;
     }
-    
-    .pomodoro {
-        background: none;
-        box-shadow: none;
-        width: 26rem;
-    }
 
     #youtube {
-        width: 20rem;
-        background: none;
-        box-shadow: none;
-        border-radius: 2rem;
         display: none;
-        
     }
 
     #btnMute {

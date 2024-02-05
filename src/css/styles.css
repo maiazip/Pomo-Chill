@@ -167,7 +167,7 @@ background: linear-gradient(rgba(0, 0, 0, 0.1), var(--color--background));
 
 .notes textarea {
   width: 33vw;
-  height: 85vh;
+  height: 83vh;
   border-radius: 1rem;
   background-color: var(--color--transparent);
   resize: none;
@@ -213,7 +213,7 @@ display: none;
 }
 
 #tasks {
-  height: 85vh;
+  height: 83vh;
   width: 33vw;
   padding: 1rem;
   border-radius: 1rem;
@@ -270,7 +270,7 @@ display: none;
   background-color: var(--color--transparent);
   width: 29.1vw;
   height: 3vh;
-  border-radius: 0.5rem;
+  border-radius: 0.2rem;
   /* border: 2px solid var(--color--transparent2); */
 }
 
@@ -281,7 +281,7 @@ display: none;
   justify-content: baseline;
   background-color: var(--color--transparent);
   margin: 0.5rem;
-  width: 30vw;
+  width: 76vw;
   height: 50%;
   border-radius: 0.3rem;
   font-weight: 100;
@@ -298,7 +298,7 @@ display: none;
 }
 
 #youtube {
-  height: 38.5vh;
+  height: 36vh;
   width: 22vw;
   display: flex;
   flex-direction: column;
