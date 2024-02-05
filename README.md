@@ -4,9 +4,9 @@
 Boost your productivity with Pomo&Chill!
 
 <p align="center">
-<a href="#projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
-<a href="#tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
-<a href="#contato">Contato</a>
+<a href="#project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+<a href="#technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+<a href="#contact">Contact</a>
 </p>
 
 <div align="center">
@@ -19,16 +19,16 @@ Boost your productivity with Pomo&Chill!
 <img alt="Page Preview" src="./.github/previewMobile.png" witdh="100%">
 </p>
 
-## Projeto
+## Project
 The project was made to improve the user's productivity, with the help of many features, including a pomodoro timer, a space to take notes, a tasks system using localstorage and music!
 
-## Tecnologias
+## Technologies
 
 - HTML
 - CSS
 - JavaScript
 - Git
 - Github
-## Contato
+## Contact
 
 maia.zip@hotmail.com
