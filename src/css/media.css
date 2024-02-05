@@ -31,3 +31,9 @@
         display: initial;
     }
 }
+
+@media (max-width:800px)  {
+    #credits {
+        
+    }
+}

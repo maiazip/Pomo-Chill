@@ -344,7 +344,7 @@ display: none;
   align-items: center;
   justify-content: center;
   position: fixed;
-  top: 97vh;
+  top: 97%;
   /* border-top: 2px solid var(--color--transparent2); */
   z-index: 3;
 }
