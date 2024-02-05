@@ -338,13 +338,13 @@ display: none;
 
 #credits {
   background-color: var(--color--transparent);
-  width: 100vw;
-  height: 3vh;
+  width: 100%;
+  height: 4%;
   display: flex;
   align-items: center;
   justify-content: center;
   position: fixed;
-  top: 97%;
+  top: 96%;
   /* border-top: 2px solid var(--color--transparent2); */
   z-index: 3;
 }
