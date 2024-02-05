@@ -8,10 +8,6 @@
         display: none;
     }
     
-    main {
-        justify-content: center;
-    }
- 
     .pomodoro {
         background: none;
         box-shadow: none;
@@ -29,11 +25,5 @@
 
     #btnMute {
         display: initial;
-    }
-}
-
-@media (max-width:800px)  {
-    #credits {
-        
     }
 }
