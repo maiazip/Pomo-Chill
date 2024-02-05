@@ -16,6 +16,7 @@ Boost your productivity with Pomo&Chill!
 
 <p align="center">
 <img alt="Page Preview" src="./.github/preview.png" witdh="100%">
+<img alt="Page Preview" src="./.github/previewMobile.png" witdh="100%">
 </p>
 
 ## Projeto
