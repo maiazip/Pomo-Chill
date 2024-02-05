@@ -3,8 +3,16 @@ const timerTypeShortBreak = document.querySelector('#btnShortBreak');
 const timerTypeLongBreak = document.querySelector('#btnLongBreak');
 const btnPlay = document.querySelector('#btnPlay')
 const btnPause = document.querySelector('#btnPause');
-const btnRestart = document.querySelector('#btnRestart')
+const btnRestart = document.querySelector('#btnRestart');
 const initialTitle = document.title;
+const audio = new Audio('./src/assets/audios/audioTimer.mp3');
+
+let completedPomodoros = 0;
+const pomodorosBeforeLongBreak = 3;
+
+function playAudio() {
+    audio.play();
+}
 
 let interval;
 let currentTimerValue = null;
@@ -83,6 +91,22 @@ function startTimer(timer, initialTime) {
             if (seconds === 0) {
                 clearInterval(interval);
                 timerRunning = false;
+                playAudio(); // Adiciona a reprodução do áudio ao final do temporizador
+
+                // Muda para o próximo timer automaticamente
+                if (timer === 'pomodoro') {
+                    completedPomodoros++; // Incrementa apenas se o timer concluído for um pomodoro
+                    if (completedPomodoros < pomodorosBeforeLongBreak) {
+                        // Se ainda não atingiu o limite, alterna entre pomodoro e short break
+                        selectTimer('shortbreak');
+                    } else {
+                        // Se atingiu o limite, muda para o long break e reinicia o contador
+                        selectTimer('longbreak');
+                        completedPomodoros = 0;
+                    }
+                } else {
+                    selectTimer('pomodoro');
+                }
             }
         }, 1000);
     }
