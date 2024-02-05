@@ -91,16 +91,13 @@ function startTimer(timer, initialTime) {
             if (seconds === 0) {
                 clearInterval(interval);
                 timerRunning = false;
-                playAudio(); // Adiciona a reprodução do áudio ao final do temporizador
+                playAudio();
 
-                // Muda para o próximo timer automaticamente
                 if (timer === 'pomodoro') {
-                    completedPomodoros++; // Incrementa apenas se o timer concluído for um pomodoro
+                    completedPomodoros++; 
                     if (completedPomodoros < pomodorosBeforeLongBreak) {
-                        // Se ainda não atingiu o limite, alterna entre pomodoro e short break
                         selectTimer('shortbreak');
                     } else {
-                        // Se atingiu o limite, muda para o long break e reinicia o contador
                         selectTimer('longbreak');
                         completedPomodoros = 0;
                     }

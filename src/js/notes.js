@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function clear() {
       var textarea = document.querySelector('#notesTextarea');
-      textarea.value = ''; // Limpa o conteúdo da textarea
+      textarea.value = '';
     }
 
     function copyClear() {

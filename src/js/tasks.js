@@ -63,7 +63,6 @@ function deleteTask(taskId) {
     const tasks = localStorage.getItem('tasks');
     const parsedTasks = JSON.parse(tasks) || [];
 
-    // Filtra as tarefas que não têm o ID correspondente
     const filteredTasks = parsedTasks.filter(task => task.id !== taskId);
     localStorage.setItem('tasks', JSON.stringify(filteredTasks));
 }
