@@ -20,9 +20,9 @@
                 <header class="pomodoroHeader">
                     <h1>Pomo&Chill</h1>
                         <div class="pomodoroHeaderButtons">
-                            <button class="active" id="btnPomodoro">Pomodoro</button>
-                            <button id="btnShortBreak">Short Break</button>
-                            <button  id="btnLongBreak">Long Break</button>
+                            <button class="active" id="btnPomodoro" tabindex="5">Pomodoro</button>
+                            <button id="btnShortBreak" tabindex="6">Short Break</button>
+                            <button  id="btnLongBreak" tabindex="7">Long Break</button>
                             </div>    
                     </header>
                     <div class="pomodoroBody">
@@ -33,20 +33,20 @@
                             </div>
                         </div>
                             <footer class="pomodoroFooterButtons">
-                                <button id="btnPlay" title="start timer"><img src="./src/assets/icons/btnPlay.svg" alt=""></button>
-                                <button id="btnPause" title="Stop Timer"><img src="./src/assets/icons/btnPause.svg" alt=""></button>
-                                <button id="btnRestart" title="Restart Timer"><img src="./src/assets/icons/btnRestart.svg" alt=""></button>
-                                <button id="btnMute" title="Mute LoFi Music"><img src="./src/assets/icons/btnMute.svg" alt=""></button>
+                                <button id="btnPlay" title="start timer" tabindex="1"><img src="./src/assets/icons/btnPlay.svg" alt=""></button>
+                                <button id="btnPause" title="Stop Timer" tabindex="2"><img src="./src/assets/icons/btnPause.svg" alt=""></button>
+                                <button id="btnRestart" title="Restart Timer" tabindex="3"><img src="./src/assets/icons/btnRestart.svg" alt=""></button>
+                                <button id="btnMute" title="Mute LoFi Music" tabindex="4"><img src="./src/assets/icons/btnMute.svg" alt=""></button>
                                 </footer>
                     </div>
                 </section>
                     <section class="notes">
                         <form action="" method="">
-                             <textarea id="notesTextarea" cols="30" rows="10" placeholder="Notes" name="textarea"></textarea>
+                             <textarea id="notesTextarea" cols="30" rows="10" placeholder="Notes" name="textarea" tabindex="8"></textarea>
                                 <div id="notesButtons">
-                                    <input type="button" id="btnCopy" value="Copy to clipboard">
-                                    <input type="button" id="btnClear" value="Clear the textarea">
-                                    <input type="button" id="btnCopyClear" value="Copy & Clear">
+                                    <input type="button" id="btnCopy" value="Copy to clipboard" tabindex="9">
+                                    <input type="button" id="btnClear" value="Clear the textarea" tabindex="10">
+                                    <input type="button" id="btnCopyClear" value="Copy & Clear" tabindex="11">
                                     </div>
                             </form>
                         </section>
@@ -54,8 +54,8 @@
                                 <div id="tasksContainer">
                                       <h1>Tasks</h1>
                                         <form action="">
-                                             <input type="text" id="newTask" name="new task" title="add new task" required placeholder="give your task a name"/>
-                                             <button type="button" id="createTask">Create Task</button>
+                                             <input type="text" id="newTask" name="new task" title="add new task" required placeholder="give your task a name" tabindex="12"/>
+                                             <button type="button" id="createTask" tabindex="13">Create Task</button>
                                             </form>
                                     </div>
                                         <div id="tasksList">
