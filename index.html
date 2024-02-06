@@ -3,11 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <meta name="description" content="Boost your productivity with Pomo&Chill, using Pomodoro Timer, tasks, notes and LoFi music">
-           <title>Pomo&Chill</title>
+        <meta name="description" content="Boost your productivity with Pomo&Chill, using Pomodoro Timer, notes and tasks, with LoFi music">
+        <title>Pomo&Chill</title>
         <link rel="icon" href="./src/assets/icons/favicon2.svg">
         <link href="https://fonts.googleapis.com/css?family=Oxygen:300,regular,700" rel="stylesheet" />
-
         <link rel="stylesheet" href="./src/css/styles.css">
         <link rel="stylesheet" href="./src/css/reset.css">
         <link rel="stylesheet" href="./src/css/animation.css">
@@ -15,7 +14,7 @@
     </head>
     
     <body>
-        <video id="background" src="./src/assets/videos/bg9.mp4" autoplay muted loop></video>
+    <video id="background" src="./src/assets/videos/bg9.mp4" autoplay muted loop></video>
         <main>
             <section class="pomodoro">
                 <header class="pomodoroHeader">
@@ -24,71 +23,63 @@
                             <button class="active" id="btnPomodoro">Pomodoro</button>
                             <button id="btnShortBreak">Short Break</button>
                             <button  id="btnLongBreak">Long Break</button>
-                        </div>    
-                </header>
+                            </div>    
+                    </header>
                     <div class="pomodoroBody">
-                        <div id="pomodoroProgressBar" class="pomodoroProgressBar">
+                          <div id="pomodoroProgressBar" class="pomodoroProgressBar">
                             <div class="pomodoroProgressBarInner">
-                                <span id="timerValue">25:00</p>
+                                  <span id="timerValue">25:00</p>
+                               </div>
                             </div>
                         </div>
+                            <footer class="pomodoroFooterButtons">
+                                <button id="btnPlay" title="start timer"><img src="./src/assets/icons/btnPlay.svg" alt=""></button>
+                                <button id="btnPause" title="Stop Timer"><img src="./src/assets/icons/btnPause.svg" alt=""></button>
+                                <button id="btnRestart" title="Restart Timer"><img src="./src/assets/icons/btnRestart.svg" alt=""></button>
+                                <button id="btnMute" title="Mute LoFi Music"><img src="./src/assets/icons/btnMute.svg" alt=""></button>
+                                </footer>
                     </div>
-                        <footer class="pomodoroFooterButtons">
-                            <button id="btnPlay" title="start timer"><img src="./src/assets/icons/btnPlay.svg" alt=""></button>
-                            <button id="btnPause" title="Stop Timer"><img src="./src/assets/icons/btnPause.svg" alt=""></button>
-                            <button id="btnRestart" title="Restart Timer"><img src="./src/assets/icons/btnRestart.svg" alt=""></button>
-                            <button id="btnMute" title="Mute LoFi Music"><img src="./src/assets/icons/btnMute.svg" alt=""></button>
-                        </footer>
-                    </div>
-            </section>
-                <section class="notes">
-                    <form action="" method="">
-                        <textarea id="notesTextarea" cols="30" rows="10" placeholder="Notes" name="textarea"></textarea>
-                            <div id="notesButtons">
-                                <input type="button" id="btnCopy" value="Copy to clipboard">
-                                <input type="button" id="btnClear" value="Clear the textarea">
-                                <input type="button" id="btnCopyClear" value="Copy & Clear">
-                            </div>
-                    </form>
-            </section>
-                <section id="tasks">
-                    <div id="tasksContainer">
-                        <h1>Tasks</h1>
-                        <form action="">
-                            <input type="text" id="newTask" name="new task" title="add new task" required placeholder="give your task a name"/>
-                            <button type="button" id="createTask">Create Task</button>
-                        </form>
-                    </div>
-                        <div id="tasksList">
-                            <ol id="createdTasks">  
-
-                            </ol>
-                        </div>
-                            </section>
-                            
-                            <template id="taskTemplate">
-                                <li class="task">
-                                    <div class="taskContainer">
-                                        <span class="taskText"></span>
-                                        <button type="button" class="btnDeleteTask">
-                                            <img src="./src/assets/icons/btnDelete.svg" alt="delete button icon">
-                                        </button>
+                </section>
+                    <section class="notes">
+                        <form action="" method="">
+                             <textarea id="notesTextarea" cols="30" rows="10" placeholder="Notes" name="textarea"></textarea>
+                                <div id="notesButtons">
+                                    <input type="button" id="btnCopy" value="Copy to clipboard">
+                                    <input type="button" id="btnClear" value="Clear the textarea">
+                                    <input type="button" id="btnCopyClear" value="Copy & Clear">
                                     </div>
-                                </li>
-                            </template>
-
-                            <iframe id="youtube" width="500" height="280" src="https://www.youtube.com/embed/jfKfPfyJRdk?&autoplay=1" title="lofi hip hop radio 📚 - beats to relax/study to" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen title="Youtube LoFi"></iframe>
-                            
-                            <footer id="credits">
-                                <span>coded with 🩶 by <a href="https://maiazip.github.io/LinkTree/" target="_blank">@maia.zip</a>👈🖱️</span>
-                                <button id="btnCloseCredits" title="Close Credits Bar"><img src="./src/assets/icons/btnClose.svg" alt=""></button>
-                            </footer>
-                        </main>
-                        
-
-<script src="./src/js/timer.js"></script>
-<script src="./src/js/tasks.js"></script>
-<script src="./src/js/notes.js"></script>
-<script src="./src/js/music.js"></script>
+                            </form>
+                        </section>
+                            <section id="tasks">
+                                <div id="tasksContainer">
+                                      <h1>Tasks</h1>
+                                        <form action="">
+                                             <input type="text" id="newTask" name="new task" title="add new task" required placeholder="give your task a name"/>
+                                             <button type="button" id="createTask">Create Task</button>
+                                            </form>
+                                    </div>
+                                        <div id="tasksList">
+                                            <ol id="createdTasks">  
+                                                </ol>
+                                            </div>
+                                </section>
+                                    <template id="taskTemplate">
+                                        <li class="task">
+                                            <div class="taskContainer">
+                                                <span class="taskText"></span>
+                                                 <button type="button" class="btnDeleteTask"><img src="./src/assets/icons/btnDelete.svg" alt="delete button icon"></button>
+                                                </div>
+                                            </li>
+                                        </template>
+                                          <iframe id="youtube" width="500" height="280" src="https://www.youtube.com/embed/jfKfPfyJRdk?&autoplay=1" title="lofi hip hop radio 📚 - beats to relax/study to" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen title="Youtube LoFi"></iframe>
+                                          <footer id="credits">
+                                              <span>coded with 🩶 by <a href="https://maiazip.github.io/LinkTree/" target="_blank">@maia.zip</a>👈🖱️</span>
+                                              <button id="btnCloseCredits" title="Close Credits Bar"><img src="./src/assets/icons/btnClose.svg" alt=""></button>
+                                          </footer>
+            </main>
+    <script src="./src/js/timer.js"></script>
+    <script src="./src/js/tasks.js"></script>
+    <script src="./src/js/notes.js"></script>
+    <script src="./src/js/music.js"></script>
 </body>
 </html>
