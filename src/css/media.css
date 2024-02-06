@@ -16,7 +16,7 @@
     }
 
     #tasks li {
-        width: 80%;
+        width: 80vw;
     }
 
     .notes {
@@ -73,7 +73,7 @@
     }
 
     #tasks li {
-        width: 80%;
+        width: 80vw;
     }
 
 }
