@@ -15,6 +15,10 @@
         height: 82%;
     }
 
+    #tasks li {
+        width: 80%;
+    }
+
     .notes {
         width: 40%;
     }
@@ -67,4 +71,9 @@
     #btnMute {
         display: initial;
     }
+
+    #tasks li {
+        width: 80%;
+    }
+
 }
