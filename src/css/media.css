@@ -1,5 +1,5 @@
 
-@media (max-width: 1439px){
+@media (max-width: 1439px) {
     .pomodoro {
         background: none;
         box-shadow: none;
@@ -39,7 +39,6 @@
 
 
 @media (max-width: 1000px) {
-
     .pomodoro {
         background: none;
         box-shadow: none;
@@ -50,20 +49,42 @@
         padding: 0.2rem;
     }
 
-     #tasks {
+     /* #tasks {
         position: unset;
         width: 80%;
-        height: auto; /* Ajuste a altura para se adaptar ao conteúdo */
-        margin: 2rem auto; /* Adicione margem para centralizar e espaço */
+        height: auto;
+        margin: 2rem auto; 
     }
 
     #tasks input {
         width: 80vw;
+    } */
+    #tasks { 
+        display: none;
     }
 
     .notes {
-        display: none;
+        position: unset;
+       width: 100vw;
+       height: 45vh;
+       overflow: hidden;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       overflow: hidden;
     }
+
+    .notes textarea {
+       height: 30vh;
+       width: 80vw;
+    }
+
+   #notesButtons input {
+    width: 24.5%;
+    font-size: 13px;
+    height: 2rem;
+    margin: 0;
+   }
 
     #youtube {
         display: none;
@@ -76,5 +97,10 @@
     #tasks li {
         width: 80vw;
     }
+}
 
+@media (max-width: 706px ) {
+    #notesButtons input {
+        width: 24%;
+       }
 }
