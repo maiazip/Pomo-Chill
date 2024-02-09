@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
     audioButton.classList.add('recording'); // Adiciona a classe 'recording' para definir o plano de fundo vermelho
 
     const recognition = new webkitSpeechRecognition(); // Use webkitSpeechRecognition for Chrome/Safari
-    recognition.lang = 'pt-BR'; // Set the language
+    recognition.lang = 'pt-BR,en-US'; // Set the language
     recognition.start(); // Start recognition
 
     recognition.onresult = function(event) {
