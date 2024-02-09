@@ -29,7 +29,8 @@
     }
     
     #notesButtons input {
-        width: 24%;
+        width: 17%;
+        font-size: 13px;
     }
     #btnMute {
         display: initial;

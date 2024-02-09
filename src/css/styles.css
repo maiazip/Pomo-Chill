@@ -7,23 +7,22 @@
 }
 
 body {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 }
 
 #background {
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   position: fixed;
   z-index: 0;
-  top: 0;
   background-repeat: no-repeat;
   object-fit: cover;
 }
 
 main {
-width: 100%;
-height: 100%;
+width: 100vw;
+height: 100vh;
 position: fixed;
 z-index: 1;
 display: flex;
@@ -34,8 +33,8 @@ background: linear-gradient(rgba(0, 0, 0, 0.1), var(--color--background));
 }
 
 .pomodoro {
-  width: 22vw;
-  height: 40vh;
+  width: 22%;
+  height: 40%;
   z-index: 4;
   display: flex;
   flex-direction: column;
@@ -187,7 +186,7 @@ display: none;
   /* border: 2px solid var(--color--transparent2); */
 }
 
-#btnClear, #btnCopyClear {
+#btnClear, #btnCopyClear, #btnCopy {
   margin-left: 0.5rem;
 }
 
@@ -200,9 +199,13 @@ display: none;
   background-color: var(--color--transparent2);
 }
 
+#btnSpeechRecognition.recording {
+  background-color: rgba(255, 0, 0, 0.199);
+}
+
 #tasks {
-  height: 83vh;
-  width: 33vw;
+  height: 83%;
+  width: 33%;
   padding: 1rem;
   border-radius: 1rem;
   position: fixed;
@@ -286,8 +289,8 @@ display: none;
 }
 
 #youtube {
-  height: 36vh;
-  width: 22vw;
+  height: 36%;
+  width: 22%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -306,7 +309,7 @@ display: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 100vw;
 }
 
 /* .taskContainer:not(:last-child) {

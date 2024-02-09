@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function() {
   const btnCopy = document.querySelector('#btnCopy');
   btnCopy.addEventListener('click', copy);
@@ -7,6 +8,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const btnCopyClear = document.querySelector('#btnCopyClear');
   btnCopyClear.addEventListener('click', copyClear);
+
+  const audioButton = document.querySelector('#btnSpeechRecognition');
+  audioButton.addEventListener('click', startRecording);
 
   // Recuperando o texto salvo no local storage, se existir
   const savedText = localStorage.getItem('notesTextarea');
@@ -36,9 +40,36 @@ document.addEventListener('DOMContentLoaded', function() {
       copy();
       clear();
   }
+
+  function startRecording() {
+    const audioButton = document.querySelector('#btnSpeechRecognition');
+    audioButton.classList.add('recording'); // Adiciona a classe 'recording' para definir o plano de fundo vermelho
+
+    const recognition = new webkitSpeechRecognition(); // Use webkitSpeechRecognition for Chrome/Safari
+    recognition.lang = 'pt-BR'; // Set the language
+    recognition.start(); // Start recognition
+
+    recognition.onresult = function(event) {
+      const result = event.results[0][0].transcript;
+      const textarea = document.querySelector('#notesTextarea');
+      textarea.value += result;
+
+      // Salva o conteúdo do textarea no local storage após cada transcrição
+      localStorage.setItem('notesTextarea', textarea.value);
+    };
+
+    recognition.onerror = function(event) {
+      console.error('Speech recognition error detected: ' + event.error);
+    };
+
+    recognition.onend = function() {
+      audioButton.classList.remove('recording'); // Remove a classe 'recording' quando a gravação termina
+    };
+  }
 });
 
-const credits = document.querySelector('#credits')
-const closeCredits = document.querySelector('#btnCloseCredits')
+const credits = document.querySelector('#credits');
+const closeCredits = document.querySelector('#btnCloseCredits');
 closeCredits.addEventListener('click', () => {
-    credits.style.display = 'none' });
+    credits.style.display = 'none';
+});
