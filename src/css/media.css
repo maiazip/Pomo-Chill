@@ -15,7 +15,7 @@
     }
     
     .notes input {
-
+     font-size: 11px;
     }
     .tasks {
         display: none;
@@ -27,6 +27,7 @@
     }
     
     .timer {
+        width: 100%;
         background: none;
         gap: 0;
     }
