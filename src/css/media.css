@@ -1,9 +1,15 @@
 @media (max-width: 700px ) {
+
+    main {
+        width: 100%;
+        height: 100%;
+    }
+    
     .notes {
-        height: 40%;
+        height: 35%;
         width: 80%;
         position: fixed;
-        top: 50%;
+        top: 55%;
     }
     
     .notes input {
@@ -16,18 +22,19 @@
     }
 
     .pomodoro {
-        margin-top: 1rem;
         width: 100%;
+        justify-content: baseline;
     }
     
     .timer {
         background: none;
+    
     }
 
     .youtube {
       display: none;
     }
-    
+
     #btnMute {
         display: unset;
     }
