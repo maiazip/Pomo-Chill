@@ -59,6 +59,7 @@ main {
   resize: none;
   padding: 2%;
   overflow: scroll;
+  outline: none;
 }
 
 .notes::-webkit-scrollbar {
