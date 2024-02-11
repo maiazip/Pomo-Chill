@@ -1,20 +1,20 @@
 @media (max-width: 700px ) {
 
     main {
-        width: 100%;
-        height: 100%;
+       width: 100%;
+       height: 100%;
+       display: flex;
+       flex-direction:column;
+       align-items: center;
+       justify-content: center;
     }
 
     .notes {
-        height: 35%;
-        width: 80%;
-        position: fixed;
-        top: 48%;
+        width: 90%;
+    
     }
     
     .notes input {
-        width: 4rem;
-        height: 4rem;
 
     }
     .tasks {
@@ -22,8 +22,8 @@
     }
 
     .pomodoro {
-        width: 100%;
-        justify-content: baseline;
+        width: 90%;
+
     }
     
     .timer {
