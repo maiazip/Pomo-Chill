@@ -1,3 +1,39 @@
+
+@media (min-width: 701px ) and (max-width: 1300px) {
+    .pomodoro {
+        margin-top: 2rem;
+        width: 90%;
+    }
+
+    .youtube {
+        display: none;
+    }
+
+  .notes {
+    width: 40%;
+    height: 48%;
+    position: fixed;
+    top: 50%;
+    left: 8%;
+  }
+
+  .notes textarea {
+    height: 80%;
+  }
+
+  .notes input {
+    font-size: 10px;
+  }
+
+  .tasks {
+    width: 40%;
+    height: 40%;
+    position: fixed;
+    top: 50%;
+    right: 8%;
+  }
+}
+
 @media (max-width: 700px ) {
 
     main {
@@ -17,13 +53,13 @@
     .notes input {
      font-size: 11px;
     }
+
     .tasks {
         display: none;
     }
 
     .pomodoro {
         width: 90%;
-
     }
     
     .timer {
@@ -40,128 +76,3 @@
         display: unset;
     }
 }
-
-
-/* 
-@media (max-width: 1439px) {
-    .pomodoro {
-        background: none;
-        box-shadow: none;
-        width: 90%;
-    }
-
-
-    #tasks {
-        width: 32%;
-        height: 82%;
-    }
-
-    #tasks li {
-        width: 25vw;
-    }
-
-    .notes {
-        width: 46%;
-    }
-
-    .notes textarea{
-        width: 70%;
-        height: 82vh;
-    }
-    
-    #notesButtons input {
-        width: 17%;
-        font-size: 13px;
-    }
- 
-}
-
-@media (max-width: 1250px) {
-    #btnMute {
-        display: initial;
-    }
-    #youtube {
-        display: none;
-    }
-
-    .notes {
-        top: 50%;;
-    }
-
-    .notes textarea {
-        height: 37vh;
-        width: 38vw;
-    }
-    #tasks {
-        top: 50%;
-        height: 37vh;
-        width: 40vw;
-
-    }
-
-    #notesButtons input {
-        width: 24%;
-        font-size: 13px;
-        margin: 0;
-        height: 2rem;
-    }
-}
-
-@media (max-width: 800px) {
-
-    .pomodoro {
-        background: none;
-        box-shadow: none;
-        width: 90%;
-    }
-
-    .pomodoroHeaderButtons button {
-        padding: 0.2rem;
-    }
-
-
-    #tasks { 
-        display: none;
-    }
-
-    .notes {
-       position: unset;
-       width: 100vw;
-       height: 45vh;
-       overflow: hidden;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       overflow: hidden;
-    }
-
-    .notes textarea {
-       height: 30vh;
-       width: 80vw;
-    }
-
-   #notesButtons input {
-    width: 24.5%;
-    font-size: 13px;
-    height: 2rem;
-    margin: 0;
-   }
-
-    #youtube {
-        display: none;
-    }
-
-    #btnMute {
-        display: initial;
-    }
-
-    #tasks li {
-        width: 80vw;
-    }
-}
-
-@media (max-width: 706px ) {
-    #notesButtons input {
-        width: 24%;
-       }
-} */
