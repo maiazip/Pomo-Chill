@@ -1,4 +1,36 @@
+@media (max-width: 700px ) {
+    .notes {
+        height: 40%;
+        width: 80%;
+        position: fixed;
+        top: 50%;
+    }
+    
+    .notes input {
+        width: 4rem;
+        height: 4rem;
 
+    }
+    .tasks {
+        display: none;
+    }
+
+    .pomodoro {
+        margin-top: 1rem;
+        width: 100%;
+    }
+    
+    .timer {
+        background: none;
+    }
+
+    .youtube {
+      display: none;
+    }
+}
+
+
+/* 
 @media (max-width: 1439px) {
     .pomodoro {
         background: none;
@@ -6,12 +38,9 @@
         width: 90%;
     }
 
-    #youtube {
-        display: none;
-    }
 
     #tasks {
-        width: 28%;
+        width: 32%;
         height: 82%;
     }
 
@@ -20,7 +49,7 @@
     }
 
     .notes {
-        width: 40%;
+        width: 46%;
     }
 
     .notes textarea{
@@ -32,13 +61,42 @@
         width: 17%;
         font-size: 13px;
     }
+ 
+}
+
+@media (max-width: 1250px) {
     #btnMute {
         display: initial;
     }
+    #youtube {
+        display: none;
+    }
+
+    .notes {
+        top: 50%;;
+    }
+
+    .notes textarea {
+        height: 37vh;
+        width: 38vw;
+    }
+    #tasks {
+        top: 50%;
+        height: 37vh;
+        width: 40vw;
+
+    }
+
+    #notesButtons input {
+        width: 24%;
+        font-size: 13px;
+        margin: 0;
+        height: 2rem;
+    }
 }
 
+@media (max-width: 800px) {
 
-@media (max-width: 1000px) {
     .pomodoro {
         background: none;
         box-shadow: none;
@@ -49,22 +107,13 @@
         padding: 0.2rem;
     }
 
-     /* #tasks {
-        position: unset;
-        width: 80%;
-        height: auto;
-        margin: 2rem auto; 
-    }
 
-    #tasks input {
-        width: 80vw;
-    } */
     #tasks { 
         display: none;
     }
 
     .notes {
-        position: unset;
+       position: unset;
        width: 100vw;
        height: 45vh;
        overflow: hidden;
@@ -103,4 +152,4 @@
     #notesButtons input {
         width: 24%;
        }
-}
+} */

@@ -3,15 +3,10 @@
   --color--blacks: #151515;
   --color--background: #030207b7;
   --color--transparent: #35353533;
-  --color--transparent2: #ffffff2d;
+  --color--transparent--light: #ffffff2d;
 }
 
-body {
-  width: 100vw;
-  height: 100vh;
-}
-
-#background {
+.background {
   height: 100vh;
   width: 100vw;
   position: fixed;
@@ -21,47 +16,133 @@ body {
 }
 
 main {
-width: 100vw;
-height: 100vh;
-position: fixed;
-z-index: 1;
-display: flex;
-flex-direction: column;
-justify-content: baseline;
-align-items: center;
-background: linear-gradient(rgba(0, 0, 0, 0.1), var(--color--background));
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.notes {
+  margin: 1% 0 1% 1%;
+  width: 35%;
+  height: 92%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: baseline;
+  border-radius: 1%;
+  overflow: hidden;
+}
+
+.notesButtons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.notes form {
+  width: 100%;
+  height: 100%;
+  border-radius: 1%;
+}
+
+.notes textarea {
+  width: 96%;
+  height: 92%;
+  border-radius: 1rem;
+  background-color: var(--color--transparent);
+  resize: none;
+  padding: 2%;
+  overflow: scroll;
+}
+
+.notes::-webkit-scrollbar {
+  display: none;
+}
+
+textarea::-webkit-scrollbar {
+  display: none;
+}
+
+.notes textarea::placeholder {
+  color: var(--color--whites);
+  font-size: 2rem;
+  font-weight: 100;
+  letter-spacing: 0.5rem;
+  text-align: center;
+}
+
+.notes input {
+  background-color: var(--color--transparent);
+  border-radius: 0.3rem;
+  font-family: "Oxygen";
+  color: var(--color--whites);
+  padding: 0.5rem;
+  margin-top: 0.2rem;
+  cursor: pointer;
+}
+
+#btnClear,
+#btnCopyClear,
+#btnCopy {
+  margin-left: 0.5rem;
+}
+
+.notes input:hover {
+  scale: 1.1;
+  transition: 0.4s;
+}
+
+.notes input:active {
+  background-color: var(--color--transparent2);
+}
+
+#btnSpeechRecognition.recording {
+  background-color: rgba(255, 0, 0, 0.199);
 }
 
 .pomodoro {
-  width: 22%;
-  height: 40%;
-  z-index: 4;
+  margin: 1% 0 1% 0;
+  width: 30%;
+  height: 92%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: baseline;
+  gap: 5%;
+  overflow: hidden;
+  border-radius: 1%;
+}
+
+.timer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: var(--color--transparent);
+  width: 90%;
+  height: 50%;
   border-radius: 1rem;
-  padding: 1rem;
-  margin-top: 2rem;
-  background: var(--color--transparent);
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  /* border: 2px solid var(--color--transparent2); */
+  gap: 1.5rem;
 }
-
 
 .pomodoroHeader {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 1%;
 }
 
 .pomodoroHeader h1 {
   font-weight: 100;
   font-size: 2rem;
   letter-spacing: 0.5rem;
-  font-family: "Oxygen";
+  margin-bottom: 4%;
 }
 
 .pomodoroHeaderButtons {
@@ -74,7 +155,6 @@ background: linear-gradient(rgba(0, 0, 0, 0.1), var(--color--background));
   border-radius: 1rem;
   font-weight: 100;
   background-color: var(--color--transparent);
-  /* border: 2px solid var(--color--transparent2); */
 }
 
 .pomodoroHeaderButtons button:hover {
@@ -86,6 +166,7 @@ background: linear-gradient(rgba(0, 0, 0, 0.1), var(--color--background));
 .pomodoroHeaderButtons .active {
   background-color: var(--color--whites);
   color: var(--color--blacks);
+  font-weight: bold;
 }
 
 .pomodoroBody {
@@ -102,7 +183,6 @@ background: linear-gradient(rgba(0, 0, 0, 0.1), var(--color--background));
   background-color: var(--color--transparent);
   animation: pulse 5s infinite;
   transition: all ease;
-  /* border: 2px solid var(--color--transparent2); */
 }
 
 .pomodoroProgressBarInner {
@@ -132,7 +212,6 @@ background: linear-gradient(rgba(0, 0, 0, 0.1), var(--color--background));
   padding: 0.8rem;
   border-radius: 2rem;
   background-color: var(--color--transparent);
-  /* border: 2px solid var(--color--transparent2); */
 }
 
 .pomodoroFooterButtons button:hover {
@@ -142,145 +221,119 @@ background: linear-gradient(rgba(0, 0, 0, 0.1), var(--color--background));
 }
 
 .pomodoroFooterButtons button:active {
-  background-color: var(--color--transparent2);
+  background-color: var(--color--transparent--light);
 }
 
-.notes {
-  position: fixed;
-  z-index: 2;
-  top: 2rem;
-  left: 2rem;
-}
-
-.notes textarea {
-  width: 33vw;
-  height: 83vh;
-  border-radius: 1rem;
+.tasks {
+  margin: 1% 1% 1% 0%;
+  width: 35%;
+  height: 87%;
   background-color: var(--color--transparent);
-  resize: none;
-  padding: 1rem;
-  overflow: scroll;
-  /* border: 2px solid var(--color--transparent2); */
-}
-
-textarea::-webkit-scrollbar {
-display: none;
-}
-
-.notes textarea::placeholder {
-  color: var(--color--whites);
-  font-size: 2rem;
-  font-weight: 100;
-  letter-spacing: 0.5rem;
-  text-align: center;
-}
-
-.notes input {
-  background-color: var(--color--transparent);
-  border-radius: 0.3rem;
-  font-family: "Oxygen";
-  color: var(--color--whites);
-  padding: 0.5rem;
-  margin-top: 0.2rem;
-  cursor: pointer;
-  /* border: 2px solid var(--color--transparent2); */
-}
-
-#btnClear, #btnCopyClear, #btnCopy {
-  margin-left: 0.5rem;
-}
-
-.notes input:hover {
-  scale: 1.1;
-  transition: 0.4s;
-}
-
-.notes input:active {
-  background-color: var(--color--transparent2);
-}
-
-#btnSpeechRecognition.recording {
-  background-color: rgba(255, 0, 0, 0.199);
-}
-
-#tasks {
-  height: 83%;
-  width: 33%;
-  padding: 1rem;
-  border-radius: 1rem;
-  position: fixed;
-  z-index: 2;
-  top: 2rem;
-  right: 2rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: baseline;
-  background-color: var(--color--transparent);
-  /* border: 2px solid var(--color--transparent2); */
-  overflow: scroll;
+  align-items: baseline;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 1%;
 }
 
-#tasks::-webkit-scrollbar {
+.tasks::-webkit-scrollbar {
   display: none;
-  }
+}
 
-#tasks h1 {
+.tasks h1 {
   font-weight: 100;
   font-size: 2rem;
-  display: flex;
-  justify-content: center;
+  text-align: center;
+  margin-top: 1rem;
   margin-bottom: 1rem;
-  letter-spacing: 0.5em;
+  letter-spacing: 0.5rem;
 }
 
-#tasks #createTask {
+.tasks #createTask {
   background-color: var(--color--transparent);
   color: var(--color--whites);
   padding: 0.5rem;
   margin: 0.5rem;
   border-radius: 0.4rem;
-  font-weight: 200;
-  /* border: 2px solid var(--color--transparent2); */
+  font-weight: 100;
 }
 
-#tasks button:hover {
+.tasks button:hover {
   scale: 1.1;
   transition: 0.4s;
   cursor: pointer;
 }
 
-#tasks form {
+.tasks button:active {
+  background-color: var(--color--transparent--light);
+}
+
+#tasksContainer {
+  width: 100%;
+}
+
+.tasks form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: baseline;
+}
+
+.tasks input {
+  background-color: var(--color--transparent);
+  padding: 0.5rem;
+  width: 90%;
+  border-radius: 0.2rem;
+  text-align: center;
+}
+
+#tasksList {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: baseline;
+  overflow: hidden;
+}
+
+#tasksList::-webkit-scrollbar {
+  display: none;
+}
+
+.tasks ol {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: baseline;
+  padding: 1rem;
+  overflow: scroll;
+}
+
+.tasks ol::-webkit-scrollbar {
+  display: none;
+}
+
+
+.tasks li {
+  width: 90%;
+  padding: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-#tasks input {
   background-color: var(--color--transparent);
-  width: 29.1vw;
-  height: 3vh;
-  border-radius: 0.2rem;
-  /* border: 2px solid var(--color--transparent2); */
-}
-
-#tasks li {
-  padding: 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: baseline;
-  background-color: var(--color--transparent);
-  margin: 0.5rem;
-  width: 30vw;
-  height: 50%;
+  margin-bottom: 0.5rem;
   border-radius: 0.3rem;
   font-weight: 100;
-  /* border: 2px solid var(--color--transparent2); */
   word-break: break-all;
 }
 
-#newTask::placeholder {
+.newTask::placeholder {
   color: var(--color--whites);
   text-align: center;
   font-family: "Oxygen";
@@ -288,33 +341,12 @@ display: none;
   opacity: 50%;
 }
 
-#youtube {
-  height: 36%;
-  width: 22%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 1.5rem;
-  padding: 1rem;
-  background: var(--color--transparent);
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  /* border: 2px solid var(--color--transparent2); */
-  margin-top: 2rem;
-  z-index: 2;
-}
-
-
 .taskContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100vw;
+  width: 100%;
 }
-
-/* .taskContainer:not(:last-child) {
-  border: 1px solid red;
-} */
 
 .taskContainer button {
   border: none;
@@ -322,36 +354,47 @@ display: none;
   cursor: pointer;
 }
 
-.taskText {
-  padding: 0.2rem;
-  margin: 0rem;
-}
-
-#credits {
-  background-color: var(--color--transparent);
-  width: 100%;
-  height: 4%;
+.youtube {
+  width: 90%;
+  height: 40%;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: fixed;
-  top: 96%;
-  /* border-top: 2px solid var(--color--transparent2); */
-  z-index: 3;
+  background-color: var(--color--transparent);
+  border-radius: 1rem;
 }
 
-#credits a {
+.youtube iframe {
+  width: 95%;
+  height: 95%;
+  border-radius: 1rem;
+}
+
+
+.credits {
+  width: 100%;
+  height: 4%;
+  position: fixed;
+  top: 96%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color--transparent);
+}
+
+
+.credits a {
   font-weight: 900;
 }
 
-#credits a:hover {
+.credits a:hover {
     cursor: pointer;
     background-color: var(--color--whites);
     color: var(--color--blacks);
     border-radius: 0.2rem;
 }
 
-#credits button {
+.credits button {
   position: fixed;
   right: 1rem;
   background-color: transparent;
@@ -359,7 +402,7 @@ display: none;
   align-items: center;
 }
 
-#credits button:hover {
+.credits button:hover {
   cursor: pointer;
   scale: 1.1;
   transition: 0.4s;

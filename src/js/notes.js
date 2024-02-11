@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-const credits = document.querySelector('#credits');
+const credits = document.querySelector('.credits');
 const closeCredits = document.querySelector('#btnCloseCredits');
 closeCredits.addEventListener('click', () => {
     credits.style.display = 'none';
