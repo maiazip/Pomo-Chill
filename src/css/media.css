@@ -27,6 +27,10 @@
     .youtube {
       display: none;
     }
+    
+    #btnMute {
+        display: unset;
+    }
 }
 
 
