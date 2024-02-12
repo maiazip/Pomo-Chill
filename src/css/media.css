@@ -1,3 +1,9 @@
+@media (min-width: 1300px) {
+  .notes form {
+    height: 92.5%;
+  }
+}
+
 @media (min-width: 1100px ) and (max-width: 1300px) { 
   .notes input {
     margin-top: 0;
