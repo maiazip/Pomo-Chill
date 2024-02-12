@@ -117,7 +117,7 @@ textarea::-webkit-scrollbar {
   justify-content: baseline;
   gap: 5%;
   overflow: hidden;
-  border-radius: 1%;
+  border-radius: 1rem;
 }
 
 .timer {
@@ -236,7 +236,7 @@ textarea::-webkit-scrollbar {
   align-items: baseline;
   justify-content: center;
   overflow: hidden;
-  border-radius: 1%;
+  border-radius: 1rem;
 }
 
 .tasks::-webkit-scrollbar {
