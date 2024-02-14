@@ -12,13 +12,11 @@ document.addEventListener('DOMContentLoaded', function() {
   const audioButton = document.querySelector('#btnSpeechRecognition');
   audioButton.addEventListener('click', startRecording);
 
-  // Recuperando o texto salvo no local storage, se existir
   const savedText = localStorage.getItem('notesTextarea');
   if (savedText) {
       document.querySelector('#notesTextarea').value = savedText;
   }
 
-  // Salvando o texto da textarea no local storage
   document.querySelector('#notesTextarea').addEventListener('input', function() {
       localStorage.setItem('notesTextarea', this.value);
   });
@@ -33,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function clear() {
       var textarea = document.querySelector('#notesTextarea');
       textarea.value = '';
-      localStorage.removeItem('notesTextarea'); // Removendo do local storage ao limpar
+      localStorage.removeItem('notesTextarea');
   }
 
   function copyClear() {
@@ -43,18 +41,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function startRecording() {
     const audioButton = document.querySelector('#btnSpeechRecognition');
-    audioButton.classList.add('recording'); // Adiciona a classe 'recording' para definir o plano de fundo vermelho
+    audioButton.classList.add('recording');
 
-    const recognition = new webkitSpeechRecognition(); // Use webkitSpeechRecognition for Chrome/Safari
-    recognition.lang = 'pt-BR,en-US'; // Set the language
-    recognition.start(); // Start recognition
+    const recognition = new webkitSpeechRecognition();
+    recognition.lang = 'pt-BR,en-US';
+    recognition.start();
 
     recognition.onresult = function(event) {
       const result = event.results[0][0].transcript;
       const textarea = document.querySelector('#notesTextarea');
       textarea.value += result;
 
-      // Salva o conteúdo do textarea no local storage após cada transcrição
       localStorage.setItem('notesTextarea', textarea.value);
     };
 
@@ -63,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     recognition.onend = function() {
-      audioButton.classList.remove('recording'); // Remove a classe 'recording' quando a gravação termina
+      audioButton.classList.remove('recording');
     };
   }
 });

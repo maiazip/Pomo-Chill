@@ -4,20 +4,21 @@
   }
 }
 
-@media (min-width: 1100px ) and (max-width: 1300px) { 
+@media (min-width: 1100px) and (max-width: 1300px) {
   .notes input {
     margin-top: 0;
   }
 }
-@media (min-width: 701px ) and (max-width: 1300px) {
-    .pomodoro {
-        margin-top: 2rem;
-        width: 90%;
-    }
 
-    .youtube {
-        display: none;
-    }
+@media (min-width: 701px) and (max-width: 1300px) {
+  .pomodoro {
+    margin-top: 2rem;
+    width: 90%;
+  }
+
+  .youtube {
+    display: none;
+  }
 
   .notes {
     width: 40%;
@@ -42,47 +43,47 @@
     top: 50%;
     right: 8%;
   }
-  
+
   #btnMute {
     display: unset;
+  }
 }
-}
 
-@media (max-width: 700px ) {
+@media (max-width: 700px) {
 
-    main {
-       width: 100%;
-       height: 100%;
-       display: flex;
-       flex-direction: column-reverse;
-       align-items: center;
-       justify-content: center;
-    }
+  main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .notes {
-        width: 90%;
-    
-    }
-    
-    .notes input {
-     font-size: 11px;
-    }
+  .notes {
+    width: 90%;
 
-    .tasks {
-        display: none;
-    }
+  }
 
-    .pomodoro {
-        width: 90%;
-    }
-    
-    .timer {
-        width: 100%;
-        background: none;
-        gap: 0;
-    }
+  .notes input {
+    font-size: 11px;
+  }
 
-    .youtube {
-      display: none;
-    }
+  .tasks {
+    display: none;
+  }
+
+  .pomodoro {
+    width: 90%;
+  }
+
+  .timer {
+    width: 100%;
+    background: none;
+    gap: 0;
+  }
+
+  .youtube {
+    display: none;
+  }
 }
